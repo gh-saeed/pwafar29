@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { ArrowRight, Share2 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import LayoutClient from '@/components/LayoutClient';
 
 export default function SingleNewsPage() {
   const { newsId } = useParams();
