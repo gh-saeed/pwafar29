@@ -3,10 +3,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { ArrowRight, Share2 } from 'lucide-react';
-import Header from '@/components/Header';
-import NavItem from '@/components/NavItem';
-import StarMenu from '@/components/StarMenu';
-import { Home, MessageSquareText, BookText, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function SingleNewsPage() {
@@ -52,7 +48,6 @@ export default function SingleNewsPage() {
   return (
     <LayoutClient>
     <div className="max-w-md mx-auto bg-slate-100 min-h-screen pt-24 pb-24">
-      <Header />
       
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
@@ -98,19 +93,6 @@ export default function SingleNewsPage() {
           </div>
         </div>
       </motion.div>
-
-      {/* Bottom Navigation */}
-      <div className="fixed bottom-0 left-0 w-full z-40">
-        <div className="mx-auto w-full max-w-md">
-          <div className="grid grid-cols-5 bg-white py-4 rounded-t-xl shadow-lg">
-            <NavItem icon={<Home className="w-6 h-6" />} label="خانه" />
-            <NavItem icon={<MessageSquareText className="w-6 h-6" />} label="پشتیبانی" />
-            <StarMenu items={starMenuItems} />
-            <NavItem icon={<BookText className="w-6 h-6" />} label="آموزش" />
-            <NavItem icon={<Users className="w-6 h-6" />} label="حساب کاربری" />
-          </div>
-        </div>
-      </div>
     </div>
     </LayoutClient>
   );
